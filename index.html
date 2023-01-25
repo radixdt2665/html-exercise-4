@@ -9,7 +9,7 @@
 <style>
     body{font-family: Arial, Helvetica, sans-serif;}
     h1,h2,h3,h4,h5,h6,p{margin: 0;}
-    .container{max-width:1140px;padding-left: 15px;padding-right: 15px;margin:0 auto;}
+    .container{max-width:1440px;padding-left: 15px;padding-right: 15px;margin:0 auto;}
     .container-fluid{max-width:1760px;padding-left: 15px;padding-right: 15px;margin:0 auto;}
     .color-black{color: #1D1D1D;}
     .color-black-100{color: #414141;}
@@ -24,10 +24,12 @@
     .col-4{width: calc(100% / 3);}
     .col-2{width: calc(100% / 2);}
     .align-items-center{align-items: center;}
+    .justify-content-center{justify-content: space-between;}
     .color-white{color: #ffffff;}
     .font-bold{font-weight: bold;}
     .font-italic{font-style: italic;}
     .mt-15{margin-top: 15px;}
+    .mb-10{margin-bottom: 10px;}
     .mb-20{margin-bottom: 20px;}
     .mb-40{margin-bottom: 40px;}
     .flex-wrap{flex-wrap: wrap;}
@@ -38,8 +40,10 @@
     .mb-50{margin-bottom: 50px;}
     .gap-50{gap: 50px;}
     .pl-0{padding-left: 0;}
+    .mt-30{margin-top: 30px;}
+    .w-100{width: 100%;}
 
-    .nav-main{padding: 25px 0;}
+    .nav-main{padding: 25px 0;position: sticky;top: 0;background-color: #ffffff;z-index: 99;}
     .nav-main .nav-link{color: #1D1D1D;text-decoration: none;}
     .nav-main .nav-link:hover,
     .nav-main .nav-link.active{color: #ff0000;text-decoration: underline;}
@@ -48,17 +52,12 @@
     .nav-main .search-input{padding: 15px 35px 15px 15px;width: 520px;border-radius: 25px;border: 1px solid #B6B6B6;}
     .nav-main .search-input::placeholder{color: #9B9B9B;}
 
+    .main-section{max-width:600px;margin:0 auto;padding-top: 75px;}
+    .main-section h1{font-size: 48px;line-height: 40px;}
 
-    .main-section{padding-top: 80px;padding-bottom: 50px;}
-    .main-section h1{font-size: 48px;margin:0;margin-bottom: 50px;}
-    .main-section .sub-para{line-height: 40px;}
-    .main-section .banner-content{max-width: 1000px;margin: 0 auto;}
+    .form-section input::placeholder{color: #CFCFCF;}
+    .form-section form{max-width: 660px;margin: 0 auto;}
 
-    .img-gallery .img-p-div{height: 100%;}
-    .img-gallery .img-main{height: 100%;width: 100%;object-fit: cover;display: block;}
-    .img-gallery .content-1{padding-left: 40px;padding-right:40px;padding-bottom: 40px;}
-    .img-gallery .content-2{padding-right:70px;padding-bottom: 40px;}
-    .img-gallery .view-more-link{margin-top: 20px;display: inline-block;}
 
     .footer-main{background-color: #f9f9f9;padding: 25px 0;margin-top: 50px;}
     .footer-main h5{margin-bottom: 10px;margin-top: 0;}
@@ -89,86 +88,160 @@
     <main class="main-section color-black-100">
         <div class="container">
             <div class="text-center banner-content">
-                <h1>Lorem ipsum</h1>
-                <p class="sub-para font-20"><b>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,</b>  sed do eiusmod <sub>tempor incididunt</sub> ut labore <sup>et dolore</sup> magna aliqua. <em>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</em>  consequat. Duis aute irure dolor in <del>reprehenderit</del> <u>in voluptate velit</u>  esse cillum dolore eu <small>fugiat nulla pariatur.</small>  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <mark>est laborum</mark> ."</p>
+                <h1 class="mb-50">Lorem ipsum</h1>
+                <p class="font-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod </p>
             </div>
         </div>
     </main>
-    <section class="col-section py-50">
-        <div class="container-fluid">
-            <h2 class="color-black-100 font-40 text-center mb-50">Lorem ipsum</h2>
-            <div class="d-flex gap-50">
-                <div class="col-4">
-                    <div class="content-main">
-                        <ul>
-                            <li class="color-red font-20 mb-20">Lorem ipsum</li>
-                            <ol class="pl-0 font-bold">
-                                <li class="color-black-100 font-20 mb-40"><b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</b></li>
-                                <li class="color-black-100 font-20 mb-40"><b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</b></li>
-                            </ol>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="content-main">
-                        <ul>
-                            <li class="color-red font-20 mb-20">Lorem ipsum</li>
-                            <ol class="pl-0 font-italic" type="A">
-                                <li class="color-black-100 font-20 mb-40"><i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</i></li>
-                                <li class="color-black-100 font-20 mb-40"><i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</i></li>
-                            </ol>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="content-main">
-                        <ul>
-                            <li class="color-red font-20 mb-20">Lorem ipsum</li>
-                            <ol class="pl-0" type="I">
-                                <li class="font-20 mb-40 color-blue-100">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</li>
-                                <li class="font-20 mb-40 color-blue-100">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</li>
-                            </ol>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="img-gallery py-50">
+    <section class="table-section mt-30 mb-50">
         <div class="container">
-            <h2 class="color-black-100 font-40 text-center mb-50">Lorem ipsum</h2>
-            <div class="d-flex flex-wrap">
-                <div class="col-2">
-                    <div class="img-p-div">
-                        <img src="./assets/room.png" width="425" height="172" alt="Room Image" class="img-main">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="content content-1">
-                        <h3 class="font-32 mb-20">Lorem ipsum</h3>
-                        <p class="font-18">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt utlaoreet dolore magna aliquam erat volutpat.</p>
-                        <p class="font-18 mt-15">sed diam nonummy nibh euismod tincidunt utlaoreet dolore magna aliquam erat volutpat.</p>
-                        <a href="#" class="view-more-link font-20 color-red" title="View More">View More</a>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="content content-2">
-                        <h3 class="pt-15 font-32 mb-20">Lorem ipsum</h3>
-                        <p class="font-18">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt utlaoreet dolore magna aliquam erat volutpat.</p>
-                        <p class="font-18 mt-15">sed diam nonummy nibh euismod tincidunt utlaoreet dolore magna aliquam erat volutpat.</p>
-                        <a href="#" class="view-more-link font-20 color-red" title="View More">View More</a>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="img-p-div">
-                        <img src="./assets/room-2.png" width="573" height="300" alt="Outside View" class="img-main">
-                    </div>
-                </div>
+            <table style="width:100%;border-collapse: collapse;border: 1px solid #eae7e7;" border="1" cellpadding="10">
+                <thead>
+                    <tr style="background-color: #EAE7E7;">
+                        <th style="border-left: 0;border-right: 0; text-align: start;">Company</th>
+                        <th style="border-left: 0;border-right: 0; text-align: start;">Contact</td>
+                        <th style="border-left: 0;border-right: 0; text-align: start;">Country</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border-left: 0;border-right: 0;">Lorem ipsum</td>
+                        <td style="border-left: 0;border-right: 0;">Maria Anders</td>
+                        <td style="border-left: 0;border-right: 0;">Sweden</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="border-left: 0;border-right: 0;">Lorem ipsum dolor </td>
+                        <td style="border-left: 0;border-right: 0;">Christina Berglund</td>
+                        <td style="border-left: 0;border-right: 0;">Germany</td>
+                    </tr>
+
+                    <tr>
+                        <td style="border-left: 0;border-right: 0;">Lorem ipsum quia</td>
+                        <td style="border-left: 0;border-right: 0;">Francisco Chang</td>
+                        <td style="border-left: 0;border-right: 0;">Mexico</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="main-para-section py-50">
+        <div class="container">
+            <h2 class="text-center font-40 color-black-100 mb-40">Lorem ipsum</h2>
+            <blockquote class="text-center font-20">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</blockquote>
+        </div>
+    </section>
+
+    <section class="video-section py-50">
+        <div class="container">
+            <h2 class="text-center font-40 color-black-100 mb-40">Lorem ipsum</h2>
+            <div class="text-center">
+                <video src="./assets/video.mp4" controls autoplay width="1042"></video>
             </div>
         </div>
     </section>
 
+    <section class="audio-section py-50">
+        <div class="container">
+            <h2 class="text-center font-40 color-black-100 mb-40">Lorem ipsum</h2>
+            <div class="text-center">
+                <audio src="./assets/audio.mp3" controls></audio>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section py-50">
+        <div class="container">
+            <h2 class="text-center font-40 color-black-100 mb-40">Lorem ipsum</h2>
+            <form action="">
+                <div class="d-flex justify-content-center gap-50">
+                    <div class="form-input w-100 mb-20">
+                        <label for="fname" class="font-18 mb-10 font-bold color-black-100">First Name :</label><br>
+                        <input type="text" name="fname" required maxlength="20" placeholder="First Name" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                    </div>
+                    <div class="form-input w-100 mb-20">
+                        <label for="lname" class="font-18 mb-10 font-bold color-black-100">Last Name :</label><br>
+                        <input type="text" name="lname" required placeholder="Last Name" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                    </div>
+                </div>
+                <div class="form-input w-100 mb-20">
+                    <label for="email" class="font-18 mb-10 font-bold color-black-100">Email Id :</label><br>
+                    <input type="email" name="email" required placeholder="Email Id" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                </div>
+                <div class="d-flex justify-content-center gap-50">
+                    <div class="form-input w-100 mb-20">
+                        <label for="mobile" class="font-18 mb-10 font-bold color-black-100">Mobile Number :</label><br>
+                        <input type="tel" name="mobile" required maxlength="15" placeholder="Mobile Number" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                    </div>
+                    <div class="form-input w-100 mb-20">
+                        <label for="website" class="font-18 mb-10 font-bold color-black-100">Website :</label><br>
+                        <input type="url" name="website" placeholder="Website" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-50">
+                    <div class="form-input w-100 mb-20">
+                        <label for="date" class="font-18 mb-10 font-bold color-black-100">Date :</label><br>
+                        <input type="date" name="date" max="2001-12-31" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                    </div>
+                    <div class="form-input w-100 mb-20">
+                        <label for="date-time" class="font-18 mb-10 font-bold color-black-100">Date & Time :</label><br>
+                        <input type="datetime-local" name="date-time" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-50">
+                    <div class="form-input w-100 mb-20">
+                        <label class="font-18 mb-10 color-black-100 font-bold">Select City: </label><br>
+                        <select name="city" id="city" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                            <option value="select"> city</option>
+                            <option value="ahmedabad">Ahmedabad</option>
+                            <option value="surat">Surat</option>
+                            <option value="baroda">Baroda</option>
+                        </select>
+                    </div>
+                    <div class="form-input w-100 mb-20">
+                        <label class="font-18 mb-10 color-black-100 font-bold">Gender: </label><br>
+                        <select name="gender" id="gender" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+                   
+                </div>
+
+                <div class="form-input w-100 mb-20">
+                    <label for="myfile" class="font-18 mb-10 color-black-100 font-bold">Folder:</label>
+                    <input type="file" style="font-size: 15px;padding: 5px 10px;" id="myfile" name="myfile">
+                </div>
+
+                <div class="form-input mb-20">
+                    <label for="color" class="font-18 mb-10 color-black-100 font-bold">Color : </label>
+                    <input type="color" name="color" style="font-size: 15px;padding: 5px 10px;" placeholder="Password">
+                </div>
+                <div class="form-input mb-20">
+                    <label for="range" class="font-18 mb-10 color-black-100 font-bold">Range : </label>
+                    <input type="range" name="range" style="font-size: 15px;padding: 5px 10px;" placeholder="Password">
+                </div>
+
+                <div class="d-flex">
+                    <button type="submit" style="font-size: 18px; border: 1px solid #CFCFCF;color: #000000;background-color:#ffffff;padding:15px 30px;">Submit</button>
+                    <button type="reset" style="font-size: 18px; border: 1px solid #CFCFCF;color: #000000;background-color:#ffffff;padding:15px 30px;margin-left: 15px;">Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="map-section py-50">
+        <div class="container">
+            <div class="text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.15049961975!2d72.5797426!3d23.0202434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1674477710162!5m2!1sen!2sin" width="570" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    
     <footer class="footer-main">
         <div class="container">
             <h6 class="text-center font-20">Radixweb</h6>
