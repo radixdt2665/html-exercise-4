@@ -178,7 +178,7 @@
                 <div class="d-flex justify-content-center gap-30">
                     <div class="form-input w-100 mb-20">
                         <label for="mobile" class="font-18 mb-10 font-bold color-black-100">Mobile Number :</label><br>
-                        <input type="tel" name="mobile" required maxlength="15" placeholder="Mobile Number" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
+                        <input type="tel" name="mobile" required maxlength="15" onkeypress="return onlyNumberKey(event)" placeholder="Mobile Number" class="w-100 d-block" style="font-size: 15px;padding: 5px 10px;border:1px solid#CFCFCF;">
                     </div>
                     <div class="form-input w-100 mb-20">
                         <label for="website" class="font-18 mb-10 font-bold color-black-100">Website :</label><br>
@@ -224,7 +224,7 @@
 
                 <div class="form-input mb-20">
                     <label for="color" class="font-18 mb-10 color-black-100 font-bold">Color : </label>
-                    <input type="color" name="color" style="font-size: 15px;padding: 5px 10px;" placeholder="Password">
+                    <input type="color" name="color" placeholder="Password">
                 </div>
                 <div class="form-input mb-20">
                     <label for="range" class="font-18 mb-10 color-black-100 font-bold">Range : </label>
@@ -254,5 +254,15 @@
         </div>
     </footer>
    
+    <script>
+        function onlyNumberKey(evt) {
+              
+            // Only ASCII character in that range allowed
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+    </script>
 </body>
 </html>
