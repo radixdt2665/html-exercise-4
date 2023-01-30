@@ -8,7 +8,7 @@
 </head>
 <style>
     *{box-sizing: border-box;}
-    body,html{font-family: Arial, Helvetica, sans-serif;}
+    body,html{font-family: Arial, Helvetica, sans-serif;margin: 0;}
     h1,h2,h3,h4,h5,h6,p{margin: 0;}
     .container{max-width:1440px;padding-left: 15px;padding-right: 15px;margin:0 auto;}
     .container-fluid{max-width:1760px;padding-left: 15px;padding-right: 15px;margin:0 auto;}
@@ -67,6 +67,21 @@
     .footer-main{background-color: #f9f9f9;padding: 25px 0;margin-top: 50px;}
     .footer-main h5{margin-bottom: 10px;margin-top: 0;}
 
+    @media(max-width:1400px){
+        .nav-main .search-input{width: 320px;}
+    }
+
+    @media(max-width:1199px){
+        .font-20{font-size: 15px;}
+        .ml-4{margin-left: 40px;}
+        .video-section video{width:900px;}
+    }
+
+    @media(max-width:991px){
+        .nav-header{flex-direction: column;background: #ffffff;position: absolute;width: 100%;height: 100vh; top: 0;left: 0;z-index: 99;}
+        .nav-header .nav-link{padding: 20px;}
+        .nav-main .btn-cross{z-index: 999;position: absolute;right: 20px;top: 30px;}
+    }
 
 
 </style>
@@ -75,18 +90,22 @@
         <div class="container-fluid">
             <div class="d-flex align-items-center">
                 <a href="#" title="home">
-
                     <img src="./assets/logo.png" width="202" height="54" alt="Header Logo">
                 </a>
-                <a href="#" title="home" class="ml-4 nav-link font-20 active">Home</a>
-                <a href="#" title="Html" class="ml-4 nav-link font-20">Html</a>
-                <a href="#" title="CSS" class="ml-4 nav-link font-20">CSS</a>
-                <a href="#" title="Layout" class="ml-4 nav-link font-20">Layout</a>
-                <a href="#" title="Bootstrap" class="ml-4 nav-link font-20">Bootstrap</a>
+                <div class="nav-header d-flex">
+                    <a href="#" title="home" class="ml-4 nav-link font-20 active">Home</a>
+                    <a href="#" title="Html" class="ml-4 nav-link font-20">Html</a>
+                    <a href="#" title="CSS" class="ml-4 nav-link font-20">CSS</a>
+                    <a href="#" title="Layout" class="ml-4 nav-link font-20">Layout</a>
+                    <a href="#" title="Bootstrap" class="ml-4 nav-link font-20">Bootstrap</a>
+                </div>
                 <div class="search-div ml-auto">
                     <input type="text" class="search-input" placeholder="Enter keyword, Item # or Part #" >
                     <i class="fa-solid fa-magnifying-glass s-icon"></i>
                 </div>
+                <button class="btn-cross">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
         </div>
     </nav>
